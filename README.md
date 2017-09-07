@@ -3,7 +3,7 @@
 1. **Name:** Roberto Preza
 2. **UT EID:** rap3652
 3. **Email:** prezaroberto@utexas.edu
-**Department:** Department of Aerospace Engineering and Engineering Mechanics
+**Department:** [Department of Aerospace Engineering and Engineering Mechanics](http://www.ae.utexas.edu/)
 **University:** The University of Texas at Austin
 **Level:** Undergraduate - Sophomore(2nd year)
 **ICP Class Position:** Student
