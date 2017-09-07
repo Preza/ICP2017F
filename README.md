@@ -1,8 +1,11 @@
 # ICP2017F-Introduction to Computer Programming (Fall 2017)
 
 **Name:** Roberto Preza
+
 **UT EID:** rap3652
+
 **Email:** prezaroberto@utexas.edu
+
 **Department:** Department of Aerospace Engineering and Engineering Mechanics
 **University:** The University of Texas at Austin
 **Level:** Undergraduate - Sophomore(2nd year)
