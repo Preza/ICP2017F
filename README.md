@@ -4,7 +4,7 @@
 2. **UT EID:** rap3652
 3. **Email:** prezaroberto@utexas.edu
 **Department:** [Department of Aerospace Engineering and Engineering Mechanics](http://www.ae.utexas.edu/)
-**University:** The University of Texas at Austin
+**University:** [The University of Texas at Austin](https://www.utexas.edu/)
 **Level:** Undergraduate - Sophomore(2nd year)
 **ICP Class Position:** Student
 **Course Webpage:** http://www.shahmoradi.org/ICP2017F/
