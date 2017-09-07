@@ -1,5 +1,4 @@
-# ICP2017F
-**ICP2017F-Introduction to Computer Programming (Fall 2017)**
+# ICP2017F-Introduction to Computer Programming (Fall 2017)
 
 **Name:** Roberto Preza
 **UT EID:** rap3652
@@ -11,7 +10,7 @@
 **Course Webpage:** http://www.shahmoradi.org/ICP2017F/
 **Photo:**
 
-**Description of the project’s content**
+# **Description of the project’s content**
 
 This repository contains my homework, quizzes, and virtually every effort that I have made for ICP2017F class. The structure of the project is the following:
 
