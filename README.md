@@ -8,7 +8,7 @@
 **Level:** Undergraduate - Sophomore(2nd year)                                                                                             
 **ICP Class Position:** Student                                                                                                           
 **Course Webpage:** http://www.shahmoradi.org/ICP2017F/                                                                                   
-**Photo:**     ![](https://www.linkedin.com/in/roberto-preza-a932bb120/)                                                                                                                            
+**Photo:**     ![]()                                                                                                                            
 
 # **Description of the project’s content**
 
