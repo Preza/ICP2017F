@@ -1,0 +1,126 @@
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~ (master)
+$ git branch testf1
+fatal: Not a valid object name: 'master'.
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~ (master)
+$ pwd
+/c/Users/Roberto
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~ (master)
+$ cd homework
+bash: cd: homework: No such file or directory
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~ (master)
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Audible/
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ git/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+'My Things'/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{8d173ddc-56a1-11e7-ab07-a645e2765fd9}.TM.blf
+ NTUSER.DAT{8d173ddc-56a1-11e7-ab07-a645e2765fd9}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{8d173ddc-56a1-11e7-ab07-a645e2765fd9}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Pictures/
+ PrintHood@
+ REACHit/
+ Recent@
+ Roaming/
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Tracing/
+ Videos/
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~ (master)
+$ cd git
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git (master)
+$ cd homework
+bash: cd: homework: No such file or directory
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git (master)
+$ ls
+ICP2017F/
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git (master)
+$ cd ICP2017F
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F (master)
+$ cd homework
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework (master)
+$ cd 1
+bash: cd: 1: No such file or directory
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework (master)
+$ cd 1
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (master)
+$ git branch test1
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (master)
+$ git branch test2
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (master)
+$ git checkout test1
+Switched to branch 'test1'
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (test1)
+$ vim test.txt
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (test1)
+$ git add test.txt
+warning: LF will be replaced by CRLF in homework/1/test.txt.
+The file will have its original line endings in your working directory.
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (test1)
+$ ls
+test.txt
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (test1)
+$ git commit test1
+error: pathspec 'test1' did not match any file(s) known to git.
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (test1)
+$ git commit
+[test1 33357b6] commited test1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 homework/1/test.txt
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1 (test1)
+$ git checkout test2
+Switched to branch 'test2'
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1
+$ ls
+ls: cannot open directory '.': Permission denied
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1
+$ ls
+ls: cannot open directory '.': Permission denied
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1
+$ vim test.txt
+
+Roberto@LAPTOP-KQU7OC3E MINGW64 ~/git/ICP2017F/homework/1
+$
