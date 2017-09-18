@@ -1,3 +1,3 @@
-1. (D)
+1. (D) and (E1)
 2. (C)
-ls <---(not right, shows list of the files in the users folder)
+3. ls <---(not right, shows list of the files in the users folder)
