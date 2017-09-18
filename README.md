@@ -8,7 +8,8 @@
 **Level:** Undergraduate - Sophomore(2nd year)                                                                                             
 **ICP Class Position:** Student                                                                                                           
 **Course Webpage:** http://www.shahmoradi.org/ICP2017F/                                                                                   
-**Photo:**     ![](Betty-y-yo(5).jpg)                                                                                                                            
+**Photo:**   
+![](Betty-y-yo(5).jpg)                                                                                                                    
 
 # **Description of the project’s content**
 
