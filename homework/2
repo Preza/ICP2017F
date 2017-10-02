@@ -1,0 +1,252 @@
+%% Question 1
+
+a = 1
+%Creates the variable 1
+
+b = 'x'
+%'' on the x make an integer
+
+c = true
+c =
+  logical
+   1
+%Since c is set to equal true it is basically set as being equal to 1
+  
+whos a b c
+  Name      Size            Bytes  Class      Attributes
+
+  a         1x1                 8  double               
+  b         1x1                 2  char                 
+  c         1x1                 1  logical   
+%whos was used to list all the varibles in alphabetical order accordeing
+%to their name and lists their size and variable type  
+
+a == c
+%A and c are not equal
+
+a + c
+ans =
+     2
+%a=1 and c=1 so 1+1 equals 2
+
+d = [1 2 3 4]
+d =
+     1     2     3     4
+%Array is created
+
+e = ['a' 'b' 'c' 'd']
+e =
+abcd
+
+f = ['abcd']
+f =
+abcd
+
+g = {‘a’ ‘b’ ‘c’ ‘d’}
+ g = {‘a’ ‘b’ ‘c’ ‘d’}
+      ↑
+Error: The input character is not valid in MATLAB statements or
+expressions.
+
+h = { a b c d}
+h =
+  1×4 cell array
+    [1]    'x'    [1]    [1×4 double]
+
+whos d e f g h
+ Name      Size            Bytes  Class     Attributes
+
+  d         1x4                32  double              
+  e         1x4                 8  char                
+  f         1x4                 8  char                
+  h         1x4               491  cell
+
+  
+%% Question 2  
+ 
+int8(128)
+ans =
+  int8
+   127
+%If a number exceeds or goes under the range of an int than it will by
+%default show the max or min
+int8(-128)
+ans =
+  int8
+   -128
+ 
+intmax('int16')
+ans =
+  int16
+   32767
+
+intmin('int16')
+ans =
+  int16
+   -32768
+
+intmin('int32')
+ans =
+  int32
+   -2147483648
+
+intmax('int32')
+ans =
+  int32
+   2147483647
+   
+   
+%% Question 3
+1\2 
+ans =
+     2
+%2 divided by 1
+
+1/2
+ans =
+    0.5000
+%1 divided by 2
+
+int8(1/2)
+ans =
+  int8
+   1
+
+int8(1/3)
+ans =
+  int8
+   0
+%1/2 and 1/3 are saved as 8 bit signed integers
+
+-5^2 
+ans =
+   -25
+
+(-5) ^ 2 
+ans =
+    25
+
+10-6/2 
+ans =
+     7
+
+5*4/2*3
+ans =
+    30
+
+%%Question 4a
+
+a = [1 0;2 1]
+a =
+
+     1     0
+     2     1
+
+b = [-1 2;0 1]
+b =
+    -1     2
+     0     1
+
+c = [3;2]
+c =
+     3
+     2
+
+d = 5
+d =
+     5
+
+%%Question 4b
+a + b
+ans =
+     0     2
+     2     2
+a .* b
+ans =
+     -1     0
+     0     1
+a * b
+ans =
+    -1     2
+    -2     5
+a * c
+ans =
+     3
+     8
+a + c
+ans =
+     4     3
+     4     3
+a + d
+ans =
+     6     5
+     7     6
+a .* d
+ans =
+     5     0
+     10     5
+a * d 
+ans =
+     5     0
+	 10     5
+
+%%Question 5
+x = [2 2 2];
+a = diag(x)
+a =
+
+     2     0     0
+     0     2     0
+     0     0     2
+
+a = eye(3)
+a =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+a = 2*eye(3)
+a =
+
+     2     0     0
+     0     2     0
+     0     0     2
+	 
+x = zeros(3)
+x =
+
+     0     0     0
+     0     0     0
+     0     0     0
+
+c(1,1)=2
+c =
+
+     2
+     2
+
+x(1,1)=2
+x =
+
+     2     0     0
+     0     0     0
+     0     0     0
+
+x(2,2)=2
+x =
+
+     2     0     0
+     0     2     0
+     0     0     0
+
+x(3,3)=2
+x =
+
+     2     0     0
+     0     2     0
+     0     0     2
+	 
+%%Question6
+%%Question7
+%%Question8
