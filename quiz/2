@@ -1,0 +1,30 @@
+1.
+  a)compiling 
+  b)yes
+2.
+  a)Fortran
+  b)60s
+3.
+  a)Python
+  b)First
+4.
+  a)70s
+  b)80s
+  c)90s
+5.A
+6.Java
+7.Fortran
+8.cell array
+  c = eye(2);
+    a(1,1)= [1,3,-7;2,0,6;0,5,1]
+    a(1,2,)= disp('This is a text string.')
+    a(2,1)= [3+4i,-5;-10i,3-4i]
+    a(2,2)= []
+9.It would show you the second integer listed in c. 
+  EX: c = 'I' 'like' 'cake';--->then c{2} will show like.
+  You get this value because the 2 enclosed by {} represents the figurative locker made up by ''
+10.Column-wisw, this means that data has the ability to moe horizontally between the storage.
+11.64 bytes
+12.It would still run it but it would be very slow since int32 was not intended to run int64.
+Bonus:Create complex number
+  i=1^(-1/2);
