@@ -81,7 +81,9 @@ function n = getFib(n_int)
         n = n_int;
     else
         n = fibonacci(n_int-2)+fibonacci(n_int-1);
-    end    
+    end 
+end
+
 function x = fib(n)
 if n == -1 
     disp('end')
@@ -89,13 +91,13 @@ else
     abc = isreal(n);
     if abc == 1
         if n < 0
-            disp('This is not a non-negative number!')
+            disp('Please enter a non-negative integer:')
             x=fib(n);
         end
        n = round(n);
        x =getFib(n);
     elseif abc==0
-    disp('This is not a real number!')
+    disp('Not a real')
      x = fib(n);
     end
 end
