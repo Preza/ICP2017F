@@ -44,28 +44,63 @@ t =
 function results=getPolar(inputCartesianStruct)
     inputCartesianStruct.x = []
     inputCartesianStruct.y = []
-    cart = isfield(inputCartesianStruct, {'x','y'})
-    if cart == 1
+    abc = isfield(inputCartesianStruct, {'x','y'})
+    if abc == 1
         results.r = sqrt(inputCartesianStruct.x^2+inputCartesianStruct.y^2);
         results.phi = atan(inputCartesianStruct.x./inputCartesianStruct.y);
-    else
-        disp('Your dimensions are not correct.')
+    else 
+        disp('Dimensions are invalid')
 end
- 
+
 function results=getCart(inputPolarStruct)
     inputPolarStruct.r = []
     inputPolarStruct.phi = []
-    cart = isfield(inputPolarStruct, {'r','phi'})
-    if cart == 1
+    abc = isfield(inputPolarStruct, {'r','phi'})
+    if abc == 1
         results.x = inputPolarStruct.r*cos(inputPolarStruct.phi);
         results.y = inputPolarStruct.r*sin(inputPolarStruct.phi);
-    else
-        disp('Dimensions are wrong.')
-end
+    else 
+        disp('Dimensions are invalid.')
+end 
 
 
 %% Question 4
+function [filesize, names] = dirsize(filename)
+s = dir
+t = size(s);
+disp(s)
+size_dir = sum([s.bytes]);
+l= ['Direstory size: ', num2str(size_dir), ' bytes'];
+disp(l)
+end
+
+
 %% Question 5
+function n = getFib(n_int)
+    if n_int==0||n_int==1
+        n = n_int;
+    else
+        n = fibonacci(n_int-2)+fibonacci(n_int-1);
+    end    
+function x = fib(n)
+if n == -1 
+    disp('end')
+else
+    abc = isreal(n);
+    if abc == 1
+        if n < 0
+            disp('This is not a non-negative number!')
+            x=fib(n);
+        end
+       n = round(n);
+       x =getFib(n);
+    elseif abc==0
+    disp('This is not a real number!')
+     x = fib(n);
+    end
+end
+
+
 %% Question 6
 function [T] = area(x1,y1,x2,y2,x3,y3)
 T=1/2*abs(x2*y3-x3*y2-x1*y3+x3*y1+x1*y2-x2*y1)
@@ -108,3 +143,11 @@ isPrime(23)
 
 
 %% Question 8
+function y = evalFunc(a,b,c,x)
+    y = (a.*x^2)+(b.*x)+c;
+end
+
+function h=genfunc(a,b,c,X)
+y=evalFunc(a,b,c,X);
+     h = y;
+end
