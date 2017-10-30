@@ -1,1 +1,110 @@
+%% Question 1
+x = input('What is x:\n');
+y = input('What is mu:\n');
+z = input('What is sigma:\n');
 
+pdf = (1/(z*sqrt(2*pi)))*exp(-.5*(((x-y)/z)^2));
+%Get rid of semicolon so that the script will work
+%without a disp command
+
+What is x:
+1
+What is mu:
+0
+What is sigma:
+2
+pdf =
+    0.1760
+
+
+%% Question 2
+Ms = 47;
+Ml = 67;
+p = 1.038;
+c = 3.7;
+K = .0054;
+Tw = 100;
+Ty = 70; 
+To = input('What is the original temp of the egg:\n');
+M = input('Is the egg Ms or Ml:\n');
+t = (((M^(2/3))*c*(p^(1/3)))/(K*(pi^2)*(((4*pi)/3)^(2/3))))*(log(.76*((To-Tw)/(Ty-Tw))));
+
+a)What is the original temp of the egg:4
+Is the egg Ms or Ml:Ml
+t =
+  396.5763
+  
+b)What is the original temp of the egg:20
+Is the egg Ms or Ml:Ml
+t =
+  315.2179  
+
+
+%% Question 3
+function results=getPolar(inputCartesianStruct)
+    inputCartesianStruct.x = []
+    inputCartesianStruct.y = []
+    cart = isfield(inputCartesianStruct, {'x','y'})
+    if cart == 1
+        results.r = sqrt(inputCartesianStruct.x^2+inputCartesianStruct.y^2);
+        results.phi = atan(inputCartesianStruct.x./inputCartesianStruct.y);
+    else
+        disp('Your dimensions are not correct.')
+end
+ 
+function results=getCart(inputPolarStruct)
+    inputPolarStruct.r = []
+    inputPolarStruct.phi = []
+    cart = isfield(inputPolarStruct, {'r','phi'})
+    if cart == 1
+        results.x = inputPolarStruct.r*cos(inputPolarStruct.phi);
+        results.y = inputPolarStruct.r*sin(inputPolarStruct.phi);
+    else
+        disp('Dimensions are wrong.')
+end
+
+
+%% Question 4
+%% Question 5
+%% Question 6
+function [T] = area(x1,y1,x2,y2,x3,y3)
+T=1/2*abs(x2*y3-x3*y2-x1*y3+x3*y1+x1*y2-x2*y1)
+a = [x1,y1];
+b = [x2,y2];
+c = [x3,y3];
+
+x = [a(1), b(1), c(1)]; 
+y = [a(2), b(2), c(2)]; 
+
+area_triangle = polyarea(x,y);
+disp(['Area of triangle is:', num2str(area_triangle)]);
+end
+   
+area(2,3,5,7,4,9)
+The area of this triangle is: 5
+ans =
+     5
+
+
+%% Question 7
+function p = isPrime(x)
+n=length(divisors(x));
+if  n==2
+    disp('True');
+else 
+    disp('False');
+end
+
+isPrime(34)
+  False
+isPrime(55)
+  False
+isPrime(12)
+  False
+isPrime(5)
+  True
+isPrime(23)
+  True
+
+
+%% Question 8
