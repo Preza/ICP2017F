@@ -28,6 +28,15 @@ function [fac] = getFacFor(n)
  end
 
 C)
+function getFacVec(g)
+if g == 0
+    fac = 1
+elseif g == 1
+    fac = 1
+else g > 1
+    g*factorial(g-1)
+    disp ['fac = ' num2str(fac)]
+end
 
 2.
 function = timeFacFuncs(average time)
