@@ -1,1 +1,156 @@
+~~1.
+~~2.
+~~3.
+List = { {'M','A','T','L','A','B'}, {' '}, {'i','s'}, {' '}, {'a'}, {' '}, {'s','t','r','a','n','g','e'}, {', '}, {'b','u','t',' '}, {'p','o','p','u','l','a','r'}, {' '}, {'p','r','o','g','r','a','m','m','i','n','g',' ','l','a','n','g','u','a','g','e'} };
+m=length(List)
+for i=1:m
+    List{i}
+end
 
+~~4.
+The purpose of this code is to take the given value of 2 and then just taking
+its sqrt, afterwards the result is then squared. This is done a total of 60 
+times.
+
+The end result of this code is 1 and not 2 (r_original) due to the following
+reason. If r>1 then sqrt(r)>1 and r>sqrt(r). The value of r is reduced while
+still being larger than 1, r will not be larger than 1 for long since the sqrt
+will reduce it.
+
+~~5.
+This code takes the given value of 1 and recursive checks if 1.0 ~= 1.0 + eps 
+is true/false. The code also serves as a written out version of the built in
+MATLAB function eps, the equation takes the given value and divides by 2 until
+the lowest achievable value is reached which so happens to be equal to 
+eps(1)= 1.1102e-16
+
+1.0 ~= 1.0 + eps is shown as being 0(false) or equal to each other, the reason 
+being that a value between 1.0 and eps(1) must have been true(1.0 = 1.0  + eps),
+this determined the outcome of the code as a whole (one true value made the whole
+code true in a sense). Just because 1.0 ~= 1.0 + eps is false doesn't mean it is 
+always so.
+
+~~6.
+function y = GetLargestPrime(x)
+    for i=1:x
+        if isprime(i)
+            y=i;
+        end
+    end
+end
+
+~~7.
+A)
+function fib()
+ 
+    n = input('Please enter a non-negative integer or type stop: ','s');
+    if strcmp(n,'stop')
+        return
+    else
+        n = str2double(n);
+        if isreal(n)
+            if n>=0 && round(n)==n
+                disp([char(9),'averageruntime:', num2str(timeit(@()getFib(n)))]);     <<<< ANSWER for 7 
+                fib()
+                return
+            end
+        end
+        disp('The input argument is not a non-negative integer!');
+        fib()
+    end
+    
+    function fib = getFib(n_int)
+        if n_int == 0
+            fib = 0;
+        elseif n_int == 1
+            fib = 1;
+        else
+            fib = getFib(n_int-1) + getFib(n_int-2);
+        end
+    end
+ end
+
+B)
+function fibLoop()
+ 
+    n = input('Please enter a non-negative integer or type stop: ','s');
+    if strcmp(n,'stop')
+        return
+    else
+        n = str2double(n);
+        if isreal(n)
+            if n>=0 && round(n)==n
+                disp([char(9),'averageruntime:', num2str(timeit(@()getFib(n)))]);
+                fib()
+                return
+            end
+        end
+        disp('The input argument is not a non-negative integer!');
+        fib()
+    end
+    
+    function fib = getFib(n_int)
+        fibseq = zeros(n_int+1,1);
+        if n_int == 0
+            fib = 0;
+        elseif n_int == 1
+            fib = 1;
+        else
+            fibseq(1) = 0;
+            fibseq(2) = 1;
+            for i = 3:n_int+1
+                fibseq(i) = fibseq(i-1) + fibseq(i-2);
+            end 
+            fib = fibseq(end);
+        end
+    end 
+end
+
+C)
+LOOPS ARE FASTER SINCE THEY TRY TO DO AS MUCH AS POSSIBLE AT ONCE WHILE RECURSIVES HAVE TO PULL EACH ITERATION INDIVIDUALLY FROM MEMORY
+AFTER THEY ARE STORED.
+
+~~8.
+A)
+function Output() = timeFib ()
+ 
+    n = input('Please enter a non-negative integer or type stop: ','s');
+    if strcmp(n,'stop')
+        return
+    else
+        n = str2double(n);
+        if isreal(n)
+            if n>=0 && round(n)==n
+                dummyGetFib = getFib(n);
+                dummyRuntime = timeit(@()getFib(n));
+                %disp([char(9),'averageruntime:', num2str(timeit(@()getFib(n)))]);
+                Output.n = n;
+                Output.fib = dummyGetFib;
+                Output.runtime = dummyRuntime;
+                return
+            end
+        end
+        disp('The input argument is not a non-negative integer!');
+        fib()
+    end
+    
+    function fib = getFib(n_int)
+        fibseq = zeros(n_int+1,1);
+        if n_int == 0
+            fib = 0;
+        elseif n_int == 1
+            fib = 1;
+        else
+            fibseq(1) = 0;
+            fibseq(2) = 1;
+            for i = 3:n_int+1
+                fibseq(i) = fibseq(i-1) + fibseq(i-2);
+            end 
+            fib = fibseq(end);
+        end
+    end
+end
+
+B)
+        OutputTimeFibLoop = timeFibloop(i);
+end
