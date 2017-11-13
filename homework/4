@@ -50,7 +50,7 @@ function fib()
         n = str2double(n);
         if isreal(n)
             if n>=0 && round(n)==n
-                disp([char(9),'averageruntime:', num2str(timeit(@()getFib(n)))]);     <<<< ANSWER for 7 
+                disp([char(9),'averageruntime:', num2str(timeit(@()getFib(n)))]);
                 fib()
                 return
             end
