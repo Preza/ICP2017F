@@ -30,8 +30,9 @@ function [fac] = getFacFor(n)
 C)
 
 2.
-A)
-B)
-C)
+function = timeFacFuncs(average time)
+tic, getFacWhile, toc
+tic, getFacFor, toc
+tic, getFacVec, toc
 
 3.
