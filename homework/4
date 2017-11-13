@@ -1,5 +1,60 @@
 ~~1.
+A)
+function [F] = ConvertTempWhile(InVec,statement)
+    InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
+    while statement =='C2F'
+    F=InVec*(9/5)+32; 
+    end
+    while statement =='F2C'
+    F=(InVec-32)*(5/9);
+    end
+    while statement ~= 'F2C' || 'C2F'
+    disp('This is an error')
+end
+
+B)
+function [F] = ConvertTempFor(InVec,statement)
+    if statement =='C2F'
+    for InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
+    F=InVec*(9/5)+32; 
+    end
+    if statement =='F2C'
+    for InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
+    F=(InVec-32)*(5/9);
+    end
+    else
+    disp('This is an error')
+    end
+end
+
+C)
+function [F] = ConvertTempVec(InVec,statement)
+    InVec = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40];
+    if statement =='C2F'
+    F=InVec*(9/5)+32; 
+    elseif statement =='F2C'
+    F=(InVec-32)*(5/9);
+    else
+    disp('This is an error')
+    end
+end
+
 ~~2.
+A)
+tic, ConvertTempWhile(InVec,'C2F'), toc
+ans = -4 5 14 23 32 41 50 59 68 77 86 95 104
+Elapsed time is 0.000893 seconds.
+
+B)
+tic, ConvertTempFor(InVec,'C2F'), toc
+ans = -4 5 14 23 32 41 50 59 68 77 86 95 104
+Elapsed time is 0.001190 seconds.
+
+C)
+tic, ConvertTempVec(InVec,'C2F'), toc
+ans = -4 5 14 23 32 41 50 59 68 77 86 95 104
+Elapsed time is 0.000689 seconds.
+
 ~~3.
 List = { {'M','A','T','L','A','B'}, {' '}, {'i','s'}, {' '}, {'a'}, {' '}, {'s','t','r','a','n','g','e'}, {', '}, {'b','u','t',' '}, {'p','o','p','u','l','a','r'}, {' '}, {'p','r','o','g','r','a','m','m','i','n','g',' ','l','a','n','g','u','a','g','e'} };
 m=length(List)
@@ -42,8 +97,7 @@ end
 ~~7.
 A)
 function fib()
- 
-    n = input('Please enter a non-negative integer or type stop: ','s');
+ n = input('Please enter a non-negative integer or type stop: ','s');
     if strcmp(n,'stop')
         return
     else
@@ -72,8 +126,7 @@ function fib()
 
 B)
 function fibLoop()
- 
-    n = input('Please enter a non-negative integer or type stop: ','s');
+ n = input('Please enter a non-negative integer or type stop: ','s');
     if strcmp(n,'stop')
         return
     else
@@ -113,8 +166,7 @@ AFTER THEY ARE STORED.
 ~~8.
 A)
 function Output() = timeFib ()
- 
-    n = input('Please enter a non-negative integer or type stop: ','s');
+ n = input('Please enter a non-negative integer or type stop: ','s');
     if strcmp(n,'stop')
         return
     else
