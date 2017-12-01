@@ -3,10 +3,9 @@ triggerListUrl = 'http://www.shahmoradi.org/ICP2017F/quiz/5-problems/chain.txt';
 TriggerList = webread(triggerListUrl);
 TriggerList = strsplit(TriggerList,'\n');
 triggerListUrl = str2num(triggerListUrl);
-triggerListUrl = 
 
 figure()
-plot(,, 'color', 'red');
+plot(:,4, 'color', 'red');
 xlabel('Sample Number', 'fontsize', 13);
 ylabel('Growth Rate', 'fontsize', 13);
 set( gca , 'linewidth' , 3 );
