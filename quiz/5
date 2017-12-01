@@ -15,10 +15,14 @@ ylim([-2.4 -0.4]);
 saveas(gcf,'GrowthRate.png')
 
 2.
-datain = input('Input desired web address: ','s');
+addressin = input('Input desired web address: ','s');
 
-disp('Reading data ffrom the web address');
-disp('Warning: The requested web address does not exist');
+disp('Reading data from the web address');
+try
+    addressin = webread('addressin');
+catch
+    disp('Warning: The requested web address does not exist');
+end
 
 3.
   gca:referres to the current active plot in the current active figure
