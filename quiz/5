@@ -1,4 +1,4 @@
-1.
+1.(Version 1)
 triggerListUrl = 'http://www.shahmoradi.org/ICP2017F/quiz/5-problems/chain.txt';
 TriggerList = webread(triggerListUrl);
 TriggerList = strsplit(TriggerList,'\n');
@@ -6,6 +6,20 @@ triggerListUrl = str2num(triggerListUrl);
 
 figure()
 plot(:,4, 'color', 'red');
+xlabel('Sample Number', 'fontsize', 13);
+ylabel('Growth Rate', 'fontsize', 13);
+set( gca , 'linewidth' , 3 );
+xlim([1.e0 1.e6]);
+ylim([-2.4 -0.4]);
+saveas(gcf,'GrowthRate.png')
+
+
+(Version 2)
+
+d = importdata('chain.txt');
+
+figure()
+plot(d.data(:,4));
 xlabel('Sample Number', 'fontsize', 13);
 ylabel('Growth Rate', 'fontsize', 13);
 set( gca , 'linewidth' , 3 );
