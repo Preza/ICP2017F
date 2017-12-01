@@ -1,1 +1,25 @@
+1.
+triggerListUrl = 'http://www.shahmoradi.org/ICP2017F/quiz/5-problems/chain.txt';
+TriggerList = webread(triggerListUrl);
+TriggerList = strsplit(TriggerList,'\n');
+triggerListUrl = str2num(triggerListUrl);
+triggerListUrl = 
 
+figure()
+plot(,, 'color', 'red');
+xlabel('Sample Number', 'fontsize', 13);
+ylabel('Growth Rate', 'fontsize', 13);
+set( gca , 'linewidth' , 3 );
+xlim([1.e0 1.e6]);
+ylim([-2.4 -0.4]);
+saveas(gcf,'GrowthRate.png')
+
+2.
+datain = input('Input desired web address: ','s');
+
+disp('Reading data ffrom the web address');
+disp('Warning: The requested web address does not exist');
+
+3.
+  gca:referres to the current active plot in the current active figure
+  gcf:reffers to current figure handle in the MARLAB environment
