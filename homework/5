@@ -1,10 +1,93 @@
-1.
-2.
-PART I
+~~1.~~
+rng(131313)
+nstudents = 99; 
+StudentData= readtable('students.csv');
+ 
+triple=randperm(nstudents);
+StudentTriple = cell(3,nstudents/3);
+ 
+for i= 1:students/3
+    StudentTriple(:,i) = [ StudentData.Student(Triple(i))
+                           StudentDataStudent(Triple(nstudents/3+i))
+                           StudentData.Student(Triple2*Students/(3+i))];
+end
+xlswrite('nameTriples.xlsx', StudentTriple')
+
+~~2.~~
+~PART I~
+triggerListUrl = 'http://www.shahmoradi.org/ICP2017F/homework/5-problems/triggers.txt';
+TriggerList = webread(triggerListUrl);
+TriggerList = strsplit(TriggerList,'\n');
+
+dataDir = './swift/';
+mkdir(dataDir); %stores files in seperate and local file
+missingFileCounter = 0;
+for i = 1:length(TriggerList)
+dataRepos = 'http://www.shahmoradi.org/ICP2017F/homework/5-problems/swift/';
+filename = ['GRB',TriggerList{i},'_ep_flu.txt'];%[] concatenate
+dataURL = [dataRepos,filename];
+%missingFileCounter = 0;
+    try
+        disp(['Getting the num of files: ', num2str(i)]);
+        data = webread(dataURL);
+        fid = fopen(['./swift/',filename],'w');
+        fprintf(fid,'%s',data);
+        fclose(fid);        
+    catch
+        missingFileCounter = missingFileCounter + 1;
+        disp(['The number of missing files: ',num2str(missingFileCounter)]);
+    end %errors are exceptions    
+end
 Getting the num of files: 1019
 The number of missing files: 81
-PART II
 
-3.
-4.
-5.
+~PART II~
+
+~~3.~~
+rng('shuffle')
+nsample = 10000;
+winCounter = 0; 
+WinOdds = zeros(nsample,1);
+doors = [1,2,3];
+for isample = 1:nsample
+    doorWithCar = randi(3);
+    myChoice = randi(3);
+    hostChoice = doors(doors~=doorWithCar);
+    hostChoice = hostChoice(hostChoice~=myChoice);
+    hostChoice = hostChoice(randi(length(hostChoice)));
+    newChoice=6-hostChoice-myChoice;
+    if newChoice==doorWithCar
+        winCounter = winCounter+1;
+        WinOdds(isample) = winCounter/isample;
+    else
+        WinOdds(isample) = WinOdds(isample-1);
+    end
+    disp(['odds of winning by switching:', num2str(WinOdds(isample))])
+end
+plot(WinOdds, 'linewidth',3,'color','red')
+set(gca, 'xscale', 'log')
+
+~~4.~~
+function [F] = MonteCarloNum(S) %S stands for number of simulations
+Ncircle = []; 
+
+Xn = rand(S,1); %S determines the number of rows
+Yn = rand(S,1); %1 stands for the creation of one column
+
+for t = 1:S
+    distance = Xn.^2 + Yn.^2; %Equation for a circle
+
+    Nucircle = sum(distance<=1); %If R of circle (which equals to one) is less than one then it is within the circle
+    Ncircle(t)= sum(distance(1:t) <=1);
+    est_pi=4*Ncircle(1:t)./(1:t);
+    esti_pi = 4*Nucircle/S;
+    disp(['Pi is ', num2str(esti_pi)]);
+    figure() 
+    
+    plot(est_pi,'color', 'blue','markersize',20);
+    title('Finding pi ', 'fontsize', 12)
+    xlabel('Random sample pts used', 'fontsize', 13);
+    ylabel('PI est','fontsize', 13);
+    set(gca, 'linewidth',3);
+    saveas(gcf,'Estimationofpi.png');
+end
