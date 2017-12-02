@@ -93,4 +93,3 @@ for t = 1:S
 end
 
 Pi is 3.2128
-![](Estimationofpi.png)
