@@ -92,4 +92,5 @@ for t = 1:S
     saveas(gcf,'Estimationofpi.png');
 end
 
+Pi is 3.2128
 ![](Estimationofpi.png)
