@@ -1,1 +1,33 @@
-
+% % % % % % % % % % % % % HW#6 - PART 1          
+        imagesc(data(:,:,sliceNumber,1))%,sliceNumber),colorLimits);
+        caxis([0 3.5*10^4]) %used instead of plot.CLim
+        hold on
+        subPlot.FontSize = subPlotFontSize;
+        if icol ~= 1
+            subPlot.YTickLabels = [];
+        end
+        if irow ~= 1
+            subPlot.XTickLabels = [];
+        end
+        subPlot.Title.String = ['z = ',num2str(sliceNumber)];
+% % % % % % % % % % % % % HW#6 - PART 2
+        BW = imbinarize(data(:,:,sliceNumber,1))%,sliceNumber),colorLimits))
+        B = bwboundaries(BW);
+        hold on;
+        for j = 1:length(B)
+            contour = B{j};
+            plot(contour(:,2), contour(:,1), 'r', 'LineWidth', 4);
+        end
+       
+% % % % % % % % % % % % % HW#6 - PART 3.1
+function logLike = getLogLike(Param)
+	global data
+	logLike = -sum(log(normpdf(data,Param(1),Param(2))));
+end
+% % % % % % % % % % % % % HW#6 - PART 3.2
+load('Drand.mat');
+global data 
+data = Drand;
+fminsearch(@getLogLike,[10,2])
+% % % % % % % % % % % % % HW#6 - PART 3(RESULTS)
+ -0.0820    1.0044
