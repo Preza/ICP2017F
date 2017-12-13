@@ -29,6 +29,7 @@ end
 load('Drand.mat');
 global data 
 data = Drand;
-fminsearch(@getLogLike,[10,2])
+varib = fminsearch(@getLogLike,[10,2]);
+disp(['mu = ', num2str(varib(1)), ' sigma = ', num2str(varib(2))])
 % % % % % % % % % % % % % HW#6 - PART 3(RESULTS)
- -0.0820    1.0044
+mu = -0.082002 sigma = 1.0044
